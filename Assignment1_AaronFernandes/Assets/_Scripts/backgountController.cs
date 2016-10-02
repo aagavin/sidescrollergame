@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class backgountController : MonoBehaviour {
+public class BackgountController : MonoBehaviour {
 	// privates
 	private int _speed;
 	private Transform _transform;

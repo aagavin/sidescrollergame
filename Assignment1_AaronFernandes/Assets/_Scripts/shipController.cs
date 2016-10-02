@@ -1,9 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class shipController : MonoBehaviour {
+public class ShipController : MonoBehaviour {
 
+
+	/*
+	 * Private varables
+	 */ 
 	private Transform _transform;
+
+
+	/*
+	 * public varables
+	 */
+	public GameController gameController;
+
 
 	// Use this for initialization
 	void Start () {
@@ -25,10 +36,10 @@ public class shipController : MonoBehaviour {
 		switch (other.tag) {
 		case "One":
 		case "Zero":
-			Debug.Log ("HIT ONE & ZERO");
+			this.gameController.Compiler += 1;
 			break;
 		case "Two":
-			Debug.Log ("HIT TOW");
+			this.gameController.Ram += 1;
 			break;
 		default:
 			break;

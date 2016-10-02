@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class numberController : MonoBehaviour {
+public class NumberController : MonoBehaviour {
 
 	//private varables
 	private int _speed;
