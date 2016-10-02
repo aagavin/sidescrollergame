@@ -11,8 +11,7 @@ public class numberController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this._transform = this.GetComponent<Transform> ();
-		this.generateRandomSpeed ();
-		this.generateRandomY ();
+		this._reset ();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +20,9 @@ public class numberController : MonoBehaviour {
 		this._checkBounds ();
 	}
 
+	/// <summary>
+	/// Generates the random speedx
+	/// </summary>
 	private void generateRandomSpeed(){
 		this._speed = Random.Range (4, 12);
 	}
@@ -46,7 +48,11 @@ public class numberController : MonoBehaviour {
 	}
 
 
+	/// <summary>
+	/// Resets the number objects
+	/// </summary>
 	private void _reset(){
+		this.generateRandomSpeed ();
 		this.generateRandomY ();
 		this._transform.position = new Vector2 (338f,this._randomY);
 	}

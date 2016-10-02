@@ -15,14 +15,20 @@ public class shipController : MonoBehaviour {
 		this._transform.position = new Vector2(-270.3f, Mathf.Clamp(Input.mousePosition.y-250, -183.8f, 183.8f) );
 	}
 
+
+	/// <summary>
+	/// Raises the trigger enter2 d event.
+	/// </summary>
+	/// <param name="other">Other.</param>
 	void OnTriggerEnter2D (Collider2D other){
 
 		switch (other.tag) {
 		case "One":
-			Debug.Log ("HIT ONE");
-			break;
 		case "Zero":
-			Debug.Log ("HIT ZERo");
+			Debug.Log ("HIT ONE & ZERO");
+			break;
+		case "Two":
+			Debug.Log ("HIT TOW");
 			break;
 		default:
 			break;
