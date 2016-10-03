@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\_Scripts\BackgountController.cs" />
      <Compile Include="Assets\_Scripts\GameController.cs" />
+     <Compile Include="Assets\_Scripts\MenuController.cs" />
      <Compile Include="Assets\_Scripts\NumberController.cs" />
      <Compile Include="Assets\_Scripts\ShipController.cs" />
  <Reference Include="UnityEngine.UI">

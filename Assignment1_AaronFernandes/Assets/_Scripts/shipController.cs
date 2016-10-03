@@ -8,7 +8,7 @@ public class ShipController : MonoBehaviour {
 	 * Private varables
 	 */ 
 	private Transform _transform;
-
+	private AudioSource[] Sounds;
 
 	/*
 	 * public varables
@@ -19,6 +19,7 @@ public class ShipController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this._transform = this.GetComponent<Transform> ();
+		Sounds = this.GetComponents<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -37,9 +38,11 @@ public class ShipController : MonoBehaviour {
 		case "One":
 		case "Zero":
 			this.gameController.Compiler += 1;
+			Sounds [3].Play ();
 			break;
 		case "Two":
 			this.gameController.Ram += 1;
+			Sounds [1].Play ();
 			break;
 		default:
 			break;

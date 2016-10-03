@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameController : MonoBehaviour {
@@ -25,7 +26,11 @@ public class GameController : MonoBehaviour {
 		}
 		set{
 			this._compiler=value;
-			this.compilerText.text="Compile: "+this._compiler+"%";
+			if (this._compiler < 100) {
+				this.compilerText.text = "Compile: " + this._compiler + "%";
+			} else {
+				SceneManager.LoadScene ("Win");
+			}
 		}
 	}
 
@@ -50,7 +55,8 @@ public class GameController : MonoBehaviour {
 
 				this.ramText.text = text;
 			} else {
-				Debug.Log ("DEAD");
+				//Debug.Log ("DEAD");
+				SceneManager.LoadScene("Loose");
 			}
 		}
 	}
